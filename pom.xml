@@ -102,7 +102,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.10</version>
+            <version>1.4.12</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
@@ -114,6 +114,12 @@
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-spring</artifactId>
             <version>2.3.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
