@@ -8,7 +8,11 @@
     <packaging>jar</packaging>
 
     <name>Sample Serenity BDD project using Cucumber</name>
-
+   <!-- <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.2</version>
+    </parent>-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>4.2.1</serenity.version>
@@ -16,7 +20,6 @@
         <junit-platform-suite.version>1.11.0</junit-platform-suite.version>
         <cucumber-junit-platform-engine.version>7.16.1</cucumber-junit-platform-engine.version>
         <encoding>UTF-8</encoding>
-        <tags></tags>
         <webdriver.base.url></webdriver.base.url>
     </properties>
     <dependencyManagement>
@@ -122,6 +125,18 @@
             <version>1.18.34</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>5.3.8</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <version>2.5.2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -173,7 +188,6 @@
                 <artifactId>serenity-maven-plugin</artifactId>
                 <version>${serenity.version}</version>
                 <configuration>
-                    <tags>${tags}</tags>
                     <reports>single-page-html</reports>
                 </configuration>
                 <dependencies>

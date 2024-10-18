@@ -227,4 +227,8 @@ public class SnapshotManager {
         }
 
     }
+
+    public void createSnapShot(final String snapshotName) {
+        log.info("Creating snapshot with name: " + snapshotName);
+    }
 }
